@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+# set rgem2rpm path
+rgem2rpm_path = File.expand_path('../../lib', __FILE__)
+$:.unshift(rgem2rpm_path)
+require 'rgem2rpm'
+
+begin
+  # parse arguments
+  options = RGem2Rpm::ArgumentParse.parse(ARGV)
+  # check arguments
+  raise "Missing argument: gemfilename" unless ARGV.size == 1
+  # get filename
+  filename = ARGV[0]
+  # convert gem to rpm
+  RGem2Rpm::Converter.process(options, filename)
+rescue => e
+  puts e.message
+  exit
+end
