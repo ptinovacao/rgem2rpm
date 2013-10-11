@@ -145,8 +145,17 @@ class RGem2Rpm::Gem
       # clean build if gem has extensions
       @spec[:extensions].each { |extension|
         path = File.dirname("#{pwd}/#{@installdir}/gems/#{@filename[0, @filename.size-4]}/#{extension}")
-        FileUtils.rm_rf Dir.glob("#{path}/*.o")
-        FileUtils.rm_rf "#{path}/Makefile"
+        case RUBY_VERSION
+        when /^1.8/
+          FileUtils.rm_rf Dir.glob("#{path}/*.o")
+          FileUtils.rm_rf "#{path}/Makefile"
+        when /^1.9/
+          FileUtils.cp_r "#{path}/#{@installdir}", "#{pwd}/"
+          FileUtils.rm_rf "#{path}/#{@installdir}"
+          FileUtils.rm_rf Dir.glob("#{path}/*.o")
+          FileUtils.rm_rf Dir.glob("#{path}/*.so")
+          FileUtils.rm_rf "#{path}/Makefile"
+	end
       }
       # delete directories
       Dir["#{@installdir}/*"].each {|name| FileUtils.rm_rf(name) unless name =~ /bin|gems|specifications/ }
