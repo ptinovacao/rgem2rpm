@@ -1,4 +1,4 @@
 # -*- encoding : utf-8 -*-
 module RGem2Rpm
-  VERSION = '1.4.12'
+  VERSION = '1.4.13'
 end
