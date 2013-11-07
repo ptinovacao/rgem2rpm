@@ -18,10 +18,10 @@ class RGem2Rpm::Converter
       rpm.create
     rescue => e
       # clean temporary files
-      objects.each { |obj| obj.clean }
+      #objects.each { |obj| obj.clean }
       # write error message
-      puts e.message
-      exit
+      puts e.message 
+      exit 1
     end
   end
 end
