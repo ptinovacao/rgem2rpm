@@ -28,7 +28,9 @@ class RGem2Rpm::Gem
     # set install dir
     @installdir = "#{@spec[:installname]}-#{@spec[:version]}"
     # install gem
-    Gem::Installer.new(@filename, :env_shebang => true, :ignore_dependencies => true, :install_dir => @installdir, :bin_dir => "#{@installdir}/bin", :wrappers => true).install
+    Gem::Installer.new(@filename, :env_shebang => true, :ignore_dependencies => true, 
+      :install_dir => File.expand_path(@installdir), :bin_dir => File.expand_path("#{@installdir}/bin"),
+      :wrappers => true).install
     # install build files
     install_build_files
     # get file list
