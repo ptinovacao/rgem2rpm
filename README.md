@@ -7,7 +7,7 @@ systems to manage your ruby software.
 
 rgem2rpm provides a sane set of out-of-the box defaults that should allow most
 gem files to assemble and Just Work.
-rgem2rpm was originally maintained at https://github.com/jppeixoto/rgem2rpm.
+Currently maintained by Sergio Freire, rgem2rpm was originally developed by Joao Peixoto and hosted at https://github.com/jppeixoto/rgem2rpm.
 
 ## Getting Started
 
