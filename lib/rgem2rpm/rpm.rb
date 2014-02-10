@@ -133,7 +133,7 @@ class RGem2Rpm::Rpm
   # return changelog information
   def changelog
     change_str = StringIO.new
-    change_str << "* #{Time.now.strftime('%a %b %d %Y')} rgem2rpm <https://github.com/jppeixoto/rgem2rpm> #{@version}-#{@release}\n"
+    change_str << "* #{Time.now.strftime('%a %b %d %Y')} rgem2rpm <https://github.com/ptinovacao/rgem2rpm> #{@version}-#{@release}\n"
     change_str << "- Create rpm package\n"
     change_str.string
   end
