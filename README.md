@@ -1,6 +1,6 @@
 ## rgem2rpm
 
-rgem2rpm is a gem to make a rpm package out of a .gem file. The intent
+rgem2rpm is a gem to make a rpm package out of a .gem file. The main goal
 is to provide a minimal and flexible way to easily package a gem into an
 rpm. With this done you can use all the facilities provided by Linux Red Hat
 systems to manage your ruby software.
