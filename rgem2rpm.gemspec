@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
    s.authors                   = ["Sergio Freire", "Nuno Correia", "Joao Peixoto"]
    s.email                     = %q{sergio-s-freire@ptinovacao.pt}
    s.summary                   = %q{Convert ruby gems into rpm}
+   s.license                   = "MIT"
    s.homepage                  = %q{https://github.com/ptinovacao/rgem2rpm}
    s.description               = %q{Application that enables conversion of rubygems to rpms.}
    s.bindir                    = 'bin'

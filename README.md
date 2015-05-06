@@ -7,12 +7,11 @@ systems to manage your ruby software.
 
 rgem2rpm provides a sane set of out-of-the box defaults that should allow most
 gem files to assemble and Just Work.
-Currently maintained by Sergio Freire (sergio-s-freire at ptinovacao.pt), rgem2rpm was originally developed by Joao Peixoto and hosted at https://github.com/jppeixoto/rgem2rpm.
 
 ## Getting Started
 
-1. Install the gem: <tt>gem install rgem2rpm</tt>.
-2. Run the command: rgem2rpm <gemfilename>
+1. Install the gem: `gem install rgem2rpm`
+2. Run the command: `rgem2rpm <gemfilename>`
 3. The RPM file will be cretated in the current directory
 
 ## Usage
@@ -32,3 +31,6 @@ assemble rpm's using gem files. Run the next command to get help:
                         --jruby                      Build RPM to jruby platform (only when gem has executables).
                         --help                       Show this message.
                         --version                    Show version.
+## License
+
+rgem2rpm is released under the [MIT License](http://www.opensource.org/licenses/MIT).
